@@ -25,7 +25,7 @@ router.post("/datePlanner", async function(req, res){
             }
         }) 
     } catch(err) {
-        return res.send({
+        return res.status(500).send({
             status : "failed",
             error : err.message 
         })
